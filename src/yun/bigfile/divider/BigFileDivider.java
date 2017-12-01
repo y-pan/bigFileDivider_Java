@@ -1,4 +1,4 @@
-package yun.bigfile;
+package yun.bigfile.divider;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -79,7 +79,7 @@ public class BigFileDivider {
 	    	this.nameWithoutExt = name;
 	    	this.ext = "";
 	    }else {
-	    	this.nameWithoutExt = name.substring(0, dotIndex-1);
+	    	this.nameWithoutExt = name.substring(0, dotIndex);
 	    	this.ext = name.substring(dotIndex); // would be like:".csv"
 	    }
 	    

@@ -1,4 +1,4 @@
-package yun.bigfile;
+package yun.bigfile.divider;
 
 import java.io.FileNotFoundException;
 
