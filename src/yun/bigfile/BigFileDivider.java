@@ -32,7 +32,7 @@ public class BigFileDivider {
 		}
 
 		this.partCount = 0;
-		parseSourceFileName(); // parse source file name to get, also if outDir is null, set it to the parent of sourceFile, so sourceFile and partFiles are in the same directory
+		parseSourceFileName(); // parse source file name to get fileName and extension, also if outDir is null, set it to the parent of sourceFile, so sourceFile and partFiles are in the same directory
 		// I know it is bad design to modify variable in multiple places, just leave it for now
 	}
 	
