@@ -20,7 +20,7 @@ public class WriterRunnable implements Runnable{
 	public void run() {
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, isAppend))) {
 			bw.write(content);
-			System.out.println("Done :"+ file);
+			System.out.println("Done -> "+ file);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

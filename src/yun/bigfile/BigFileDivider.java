@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class BigFileDivider {
 
@@ -18,14 +16,11 @@ public class BigFileDivider {
 	
 	private Integer partCount = null;
 	private Integer maxDataRowCountInPart = null; 	// header doesn't count, every parts will have the same header
-	
-	private Path sourceFile_Path = null;
-	
+		
 	public BigFileDivider(String sourceFullPath, String outDirFullPath) throws FileNotFoundException {
 		
 		this.maxDataRowCountInPart = 1000;
 		this.sourceFile = sourceFullPath;
-		this.sourceFile_Path = Paths.get(this.sourceFile);
 
 		if(outDirFullPath != null && outDirFullPath.length() > 0) {
 			this.outDir = outDirFullPath.replace("\\", "/").replace("/" , File.separator);
